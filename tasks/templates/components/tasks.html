@@ -1,0 +1,11 @@
+<ul class="list-group t20">
+    {% for task in tasks %}
+        {% if task.complete %}
+            <li class="list-group-item todo-completed">{{ task }}</li>
+        {% else %}
+            <a href="{% url 'complete' task.id %}">
+                <li class="list-group-item">{{ task }}</li>
+            </a>
+        {% endif %}
+    {% endfor %}
+</ul>

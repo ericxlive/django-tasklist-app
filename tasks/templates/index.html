@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	{% include "components/head.html" %}
+	<body>
+		<div class="container-fluid" id="wrapper">	
+			<div class="row">
+				<div class="col-lg-4 col-lg-offset-4" id="content">
+					<h2>Any tasks for today?</h2>
+					{% include "components/form.html" %}
+					{% include "components/tasks.html" %}
+				</div>
+			</div>
+			{% include "components/footer.html" %}
+		</div>
+	</body>
+</html>
